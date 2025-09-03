@@ -14,12 +14,11 @@ export default function OtpInput({ length = 4, onOtpSubmit = () => {} }) {
 	const handleInputChange = (index, e) => {
 		const value = e.target.value;
 
-		if (isNaN(value)) return;
+		if (isNaN(value) && value) return;
 
 		const newOtp = [...otp];
 
-		// Allow only 1 digit input per field
-		// ??
+		// Allow only 1 and the last digit input per field
 		newOtp[index] = value.substring(value.length - 1);
 		setOtp(newOtp);
 
@@ -33,14 +32,18 @@ export default function OtpInput({ length = 4, onOtpSubmit = () => {} }) {
 		// console.log(combinedOtp);
 		if (combinedOtp.length === length) onOtpSubmit(combinedOtp);
 	};
-	// ??
+
 	const handleInputClick = (index) => {
 		// Select the first character of the input
-		inputRefs.current[index].setSelectionRange(1, 1);
+		if (inputRefs.current[index])
+			inputRefs.current[index].setSelectionRange(1, 1);
 
 		// If previous input is empty, focus on the first empty input
 		if (index > 0 && !otp[index - 1]) {
-			inputRefs.current[otp.indexOf("")].focus();
+			const emptyIndex = otp.indexOf("");
+			if (emptyIndex !== -1) {
+				inputRefs.current[emptyIndex].focus();
+			}
 		}
 	};
 

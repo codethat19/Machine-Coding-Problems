@@ -5,7 +5,7 @@ const OTP_LENGTH = 4;
 
 export default function PhoneOtpForm() {
 	const [phoneNumber, setPhoneNumber] = useState("");
-	const [showOtp, setShowOtp] = useState(true);
+	const [showOtp, setShowOtp] = useState(false);
 
 	const handlePhoneNumberChange = (e) => {
 		setPhoneNumber(e.target.value);
