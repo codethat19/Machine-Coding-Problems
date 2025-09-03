@@ -1,6 +1,6 @@
 ## OTP Verification UI
 
-[Image](assets/code-image.png)
+![OTP Verification UI Screenshot](assets/code-image.png)
 
 ### Supported Functionalities:
 
