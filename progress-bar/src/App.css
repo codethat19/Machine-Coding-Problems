@@ -1,0 +1,35 @@
+.app {
+	text-align: center;
+	font-family: sans-serif;
+}
+
+.outer {
+	border: 1px solid gray;
+	border-radius: 10px;
+	overflow: hidden;
+	margin: 20px;
+	height: 20px;
+}
+
+.inner {
+	background-color: rgb(37, 190, 37);
+	height: 20px;
+	text-align: right;
+	transition: 0.5s ease-in;
+}
+
+.granular-container {
+	display: flex;
+	flex-direction: row;
+	margin: 20px 20px 2px 20px;
+	gap: 5px;
+}
+
+.granular-outer {
+	border: 1px solid gray;
+	border-radius: 20px;
+	overflow: hidden;
+	height: 20px;
+	width: 100%;
+	transition: background-color 0.5s ease-in;
+}
