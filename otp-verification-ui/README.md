@@ -6,3 +6,4 @@
 -   Check for best practices used
 -   Debouncing for phone/otp??
 -   Try with Vanills JS
+-   Fix errors and add left/right arrow navigation
