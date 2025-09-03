@@ -59,6 +59,38 @@ export default function OtpInput({ length = 4, onOtpSubmit = () => {} }) {
 		}
 	};
 
+	const handlePaste = (e) => {
+		e.preventDefault();
+
+		const pastedData = e.clipboardData.getData("text/plain");
+
+		// Remove any non-numeric characters and limit to the required length
+		const pastedOtp = pastedData.replace(/\D/g, "").slice(0, length);
+
+		if (pastedOtp.length === 0) return;
+
+		const newOtp = new Array(length).fill("");
+		for (let i = 0; i < pastedOtp.length; i++) {
+			newOtp[i] = pastedOtp[i];
+		}
+
+		setOtp(newOtp);
+
+		// Focus on the next empty field or the last field
+		const nextEmptyIndex = newOtp.indexOf("");
+		const focusIndex = nextEmptyIndex !== -1 ? nextEmptyIndex : length - 1;
+
+		// Focus on the empty index or the last index
+		if (inputRefs.current[focusIndex]) {
+			inputRefs.current[focusIndex].focus();
+		}
+
+		// Submit if complete OTP is pasted
+		if (pastedOtp.length === length) {
+			onOtpSubmit(pastedOtp);
+		}
+	};
+
 	return (
 		<div>
 			{otp.map((value, index) => {
@@ -71,6 +103,7 @@ export default function OtpInput({ length = 4, onOtpSubmit = () => {} }) {
 						onChange={(e) => handleInputChange(index, e)}
 						onClick={() => handleInputClick(index)}
 						onKeyDown={(e) => handleInputKeyDown(index, e)}
+						onPaste={handlePaste}
 						className="otpInput"
 					/>
 				);
