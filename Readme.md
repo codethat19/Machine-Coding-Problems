@@ -2,7 +2,8 @@
 
 -   OTP Verification
 -   Progress Bar
--   Pagination/Infinite Scroll
+-   Pagination
+-   Infinite Scroll
 -   Toast Notification
 -   Modal
 -   Autocomplete Search Bar
