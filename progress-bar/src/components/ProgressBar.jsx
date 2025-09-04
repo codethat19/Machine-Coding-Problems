@@ -5,13 +5,15 @@ export default function ProgressBar({ progress, continuous, granularBars }) {
 	const [filledBars, setFilledBars] = useState(0);
 
 	useEffect(() => {
-		setTimeout(() => {
+		const fillTimeOut = setTimeout(() => {
 			setAnimatedProgress(progress);
 		}, 100);
+
+		return () => clearTimeout(fillTimeOut);
 	}, [progress]);
 
 	useEffect(() => {
-		const targetBars = Math.floor(progress / 10);
+		const targetBars = Math.floor(progress / (100 / granularBars));
 		setFilledBars(0);
 
 		if (targetBars > 0) {
@@ -23,11 +25,11 @@ export default function ProgressBar({ progress, continuous, granularBars }) {
 					}
 					return prev + 1;
 				});
-			}, 50); // 200ms delay between each bar
+			}, 100); // 100ms delay between each bar
 
 			return () => clearInterval(fillInterval);
 		}
-	}, [progress]);
+	}, [progress, granularBars]);
 
 	return (
 		<>
@@ -66,7 +68,7 @@ export default function ProgressBar({ progress, continuous, granularBars }) {
 										style={{
 											backgroundColor:
 												index < filledBars
-													? "green"
+													? "rgb(0, 176, 171)"
 													: "white",
 										}}
 										className="granular-outer"

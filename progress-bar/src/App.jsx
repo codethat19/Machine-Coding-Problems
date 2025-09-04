@@ -4,7 +4,7 @@ import ProgressBar from "./components/ProgressBar";
 function App() {
 	const bars = [2, 5, 10, 30, 50, 70, 90, 100];
 	const granularBars = 10;
-	const granularBarsProgress = [0, 20, 70, 100];
+	const granularBarsProgress = [0, 10, 20, 70, 100];
 
 	return (
 		<div className="app">
