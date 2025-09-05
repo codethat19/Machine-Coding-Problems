@@ -4,7 +4,7 @@
 
 A React-based file explorer interface that allows users to navigate through a hierarchical folder structure.
 
-![File Explorer UI](./assets/projectImage.png)
+![File Explorer UI](./src/assets/projectImage.png)
 
 ## Features
 
