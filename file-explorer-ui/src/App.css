@@ -1,0 +1,93 @@
+.app {
+	font-family: sans-serif;
+	margin: 0;
+	text-align: center;
+}
+
+.folder-tree {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	border: 2px solid black;
+	border-radius: 5px;
+	padding: 50px;
+	width: 30%;
+	margin: 0 auto;
+}
+
+.file-item {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	margin: 2px 0;
+}
+
+.file-item-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 8px;
+	height: 32px;
+	padding: 4px 8px;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	transition: all 0.2s ease;
+}
+
+.file-item-header:hover {
+	/* background-color: #f0f0f0; */
+	border-color: #d0d0d0;
+	cursor: pointer;
+}
+
+.file-item-header-content {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}
+
+.file-item-header-actions {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	/* padding: 5px; */
+	/* border: 1px solid green; */
+}
+
+.file-item .nested {
+	display: flex;
+	flex-direction: column;
+	margin-left: 20px;
+	border-left: 2px solid #e0e0e0;
+	padding-left: 8px;
+	margin-top: 2px;
+}
+
+.icon {
+	width: 18px;
+}
+
+.icon-button {
+	cursor: pointer;
+	width: 15px;
+}
+
+.icon-button:hover {
+	color: rgb(112, 112, 112);
+}
+
+.icon-spacer {
+	width: 15px;
+	height: 15px;
+}
+
+.delete-icon {
+	visibility: hidden;
+	padding: 2px;
+}
+
+.file-item-header:hover .delete-icon {
+	visibility: visible;
+	border-radius: 2px;
+	padding: 2px;
+}

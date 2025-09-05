@@ -1,0 +1,135 @@
+[
+	{
+		"type": "folder",
+		"id": "1",
+		"name": "root",
+		"contents": [
+			{
+				"type": "folder",
+				"id": "2",
+				"name": "folder1",
+				"contents": [
+					{
+						"type": "file",
+						"id": "3",
+						"name": "file1.txt",
+						"content": "This is a test file 1"
+					},
+					{
+						"type": "file",
+						"id": "4",
+						"name": "file2.txt",
+						"content": "This is a test file 2"
+					}
+				]
+			},
+			{
+				"type": "file",
+				"id": "5",
+				"name": "file3.txt",
+				"content": "This is a test file 3"
+			},
+			{
+				"type": "file",
+				"id": "6",
+				"name": "file4.txt",
+				"content": "This is a test file 4"
+			},
+			{
+				"type": "folder",
+				"id": "7",
+				"name": "folder2",
+				"contents": []
+			},
+			{
+				"type": "folder",
+				"id": "8",
+				"name": "folder3",
+				"contents": [
+					{
+						"type": "file",
+						"id": "9",
+						"name": "file5.txt",
+						"content": "This is a test file 5"
+					},
+					{
+						"type": "folder",
+						"id": "10",
+						"name": "folder4",
+						"contents": [
+							{
+								"type": "file",
+								"id": "11",
+								"name": "file6.txt",
+								"content": "This is a test file 6"
+							},
+							{
+								"type": "file",
+								"id": "12",
+								"name": "file7.txt",
+								"content": "This is a test file 7"
+							},
+							{
+								"type": "folder",
+								"id": "13",
+								"name": "folder5",
+								"contents": [
+									{
+										"type": "folder",
+										"id": "14",
+										"name": "folder6",
+										"contents": [
+											{
+												"type": "folder",
+												"id": "15",
+												"name": "folder7",
+												"contents": [
+													{
+														"type": "folder",
+														"id": "16",
+														"name": "folder8",
+														"contents": []
+													},
+													{
+														"type": "file",
+														"id": "18",
+														"name": "file8.txt",
+														"content": "This is a test file 6"
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "file",
+										"id": "21",
+										"name": "file8.txt",
+										"content": "This is a test file 6"
+									},
+									{
+										"type": "file",
+										"id": "22",
+										"name": "file9.txt",
+										"content": "This is a test file 7"
+									},
+									{
+										"type": "file",
+										"id": "23",
+										"name": "file10.txt",
+										"content": "This is a test file 6"
+									},
+									{
+										"type": "file",
+										"id": "24",
+										"name": "file11.txt",
+										"content": "This is a test file 7"
+									}
+								]
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]
