@@ -1,7 +1,6 @@
 import React from "react";
 import { File, Folder, Trash2, ChevronDown, ChevronRight } from "lucide-react";
 import { toTitleCase, isFolder } from "../utils/utility-functions";
-// import { isFolder, isFile } from "../utils/utility-functions";
 
 export default function FileItemHeader({
 	item,
@@ -17,15 +16,9 @@ export default function FileItemHeader({
 			<div className="file-item-header-content">
 				{isFolder(item) ? (
 					expanded ? (
-						<ChevronDown
-							className="icon-button"
-							// onClick={() => onToggleExpand(id)}
-						/>
+						<ChevronDown className="icon-button" />
 					) : (
-						<ChevronRight
-							className="icon-button"
-							// onClick={() => onToggleExpand(id)}
-						/>
+						<ChevronRight className="icon-button" />
 					)
 				) : (
 					<div className="icon-spacer"></div>
@@ -39,6 +32,7 @@ export default function FileItemHeader({
 					{isFolder(item) ? toTitleCase(item.name) : item.name}
 				</span>
 			</div>
+
 			<div className="file-item-header-actions">
 				<Trash2
 					className="icon-button delete-icon"
