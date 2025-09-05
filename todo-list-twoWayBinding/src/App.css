@@ -1,0 +1,42 @@
+.app {
+	font-family: sans-serif;
+	text-align: center;
+}
+
+.checked {
+	text-decoration: line-through;
+}
+
+.input-container {
+	display: flex;
+	gap: 20px;
+	align-items: center;
+	justify-content: center;
+}
+
+.input {
+	width: 300px;
+	padding: 5px;
+	border-radius: 20px;
+}
+
+.items-container {
+	margin: 20px auto;
+	display: flex;
+	flex-direction: column;
+	width: 300px;
+	text-align: left;
+}
+
+.item-container {
+	display: flex;
+	justify-content: space-between;
+	margin: 5px;
+	font-size: 1.2em;
+}
+
+.checkbox-item {
+	display: flex;
+	justify-content: left;
+	gap: 10px;
+}
